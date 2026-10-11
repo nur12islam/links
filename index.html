@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07070c">
+<meta name="description" content="DARKI LINKS — one portal to every project, tool and digital experiment built by DARKI.">
+<title>DARKI LINKS — Digital Nexus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#07070c;--panel:rgba(18,20,32,.76);--line:rgba(137,151,190,.17);--text:#f4f5ff;--muted:#9298b2;--cyan:#58f6ff;--pink:#ff3dcb;--violet:#9b6dff;--green:#79ffbd}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Space Grotesk",sans-serif;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(ellipse at 15% 10%,rgba(75,50,170,.19),transparent 40%),radial-gradient(ellipse at 85% 35%,rgba(0,207,225,.11),transparent 35%),radial-gradient(ellipse at 50% 100%,rgba(255,61,203,.08),transparent 42%)}
+body:after{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background-image:linear-gradient(rgba(118,139,181,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(118,139,181,.035) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+a{color:inherit;text-decoration:none}button,input{font:inherit}.shell{width:min(1160px,calc(100% - 40px));margin:auto}
+.topbar{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;font-family:Orbitron,sans-serif;font-weight:800;letter-spacing:.08em}.brand-mark{width:38px;height:38px;border:1px solid rgba(88,246,255,.65);display:grid;place-items:center;color:var(--cyan);transform:rotate(45deg);box-shadow:0 0 22px #58f6ff20}.brand-mark span{transform:rotate(-45deg);font-size:18px}.brand-word{font-size:15px}.brand-word em{font-style:normal;color:var(--cyan)}.top-right{display:flex;align-items:center;gap:18px;color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase}.status{display:flex;align-items:center;gap:8px}.dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 12px var(--green)}
+.hero{position:relative;text-align:center;padding:82px 0 50px}.eyebrow{font-size:11px;letter-spacing:.27em;color:var(--cyan);text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:10px}.eyebrow:before,.eyebrow:after{content:"";width:30px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan))}.eyebrow:after{transform:rotate(180deg)}h1{font-family:Orbitron,sans-serif;text-transform:uppercase;letter-spacing:-.055em;font-size:clamp(43px,8vw,91px);line-height:1.03;margin:22px 0 16px;font-weight:800}h1 .glow{color:transparent;-webkit-text-stroke:1px var(--cyan);text-shadow:0 0 30px #58f6ff28}.hero p{max-width:570px;margin:0 auto;color:var(--muted);line-height:1.8;font-size:15px}.hero p strong{color:#e5e8ff;font-weight:600}.hero-actions{margin-top:29px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.btn{border:1px solid var(--line);padding:12px 17px;border-radius:5px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:.22s;display:inline-flex;align-items:center;gap:9px}.btn-primary{color:#051015;background:var(--cyan);border-color:var(--cyan);box-shadow:0 0 24px #58f6ff25}.btn-primary:hover{box-shadow:0 0 32px #58f6ff60;transform:translateY(-2px)}.btn-quiet{background:#ffffff04;color:#d7d9eb}.btn-quiet:hover{border-color:#9b6dff88;background:#9b6dff0d}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);max-width:570px;margin:47px auto 0;border:1px solid var(--line);background:#0d0e16a8;border-radius:8px}.stat{padding:15px 10px}.stat+.stat{border-left:1px solid var(--line)}.stat b{display:block;font-family:Orbitron,sans-serif;font-size:20px;color:#f4f5ff}.stat span{display:block;font-size:10px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-top:6px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin:18px 0 20px}.section-kicker{color:var(--pink);font-size:10px;letter-spacing:.22em;text-transform:uppercase}.section-head h2{font-family:Orbitron,sans-serif;font-size:21px;margin:8px 0 0;letter-spacing:-.025em}.section-head p{color:var(--muted);font-size:12px;margin:0}
+.controls{display:flex;gap:12px;align-items:center;margin-bottom:22px;flex-wrap:wrap}.search-wrap{position:relative;flex:1;min-width:220px}.search-wrap svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted)}.search{width:100%;background:#10111b;border:1px solid var(--line);border-radius:6px;color:var(--text);padding:13px 14px 13px 42px;outline:none;transition:.2s}.search:focus{border-color:#58f6ff8a;box-shadow:0 0 0 3px #58f6ff0b}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--line);border-radius:5px;padding:10px 12px;background:#10111b;color:var(--muted);font-size:11px;cursor:pointer;transition:.2s}.filter:hover,.filter.active{color:var(--cyan);border-color:#58f6ff66;background:#58f6ff0c}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.card{position:relative;overflow:hidden;min-height:222px;padding:20px;background:linear-gradient(145deg,rgba(23,26,42,.88),rgba(11,12,20,.92));border:1px solid var(--line);border-radius:9px;transition:transform .25s,border-color .25s,box-shadow .25s;isolation:isolate}.card:before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;background:radial-gradient(circle at 90% 5%,var(--accent-soft),transparent 55%);transition:opacity .3s}.card:after{content:"";position:absolute;top:0;left:18px;right:18px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.75}.card:hover{transform:translateY(-5px);border-color:var(--accent-border);box-shadow:0 12px 36px #0005,0 0 25px var(--accent-soft)}.card:hover:before{opacity:1}.card-top{display:flex;justify-content:space-between;align-items:start}.app-icon{width:45px;height:45px;border:1px solid var(--accent-border);background:var(--accent-soft);color:var(--accent);border-radius:8px;display:grid;place-items:center;font-family:Orbitron,sans-serif;font-size:15px;font-weight:800;box-shadow:inset 0 0 18px var(--accent-soft)}.arrow{color:var(--muted);font-size:19px;transition:.2s}.card:hover .arrow{color:var(--accent);transform:translate(3px,-3px)}.tag{font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:var(--accent);margin:19px 0 7px}.card h3{margin:0;font-size:19px;letter-spacing:-.035em}.card p{color:var(--muted);font-size:12px;line-height:1.6;min-height:38px;margin:8px 0 17px}.card-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;border-top:1px solid #ffffff0b;padding-top:13px;color:#a9aec7;font-size:10px}.visit{color:var(--accent);letter-spacing:.1em;text-transform:uppercase;font-weight:700}.empty{display:none;text-align:center;color:var(--muted);padding:45px;border:1px dashed var(--line);border-radius:8px}
+.footer{margin-top:70px;border-top:1px solid var(--line);padding:23px 0 30px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:11px}.footer strong{color:#e8eaff;letter-spacing:.12em}.footer a{color:var(--cyan)}.reveal{animation:rise .7s both}.card:nth-child(2){animation-delay:.06s}.card:nth-child(3){animation-delay:.12s}.card:nth-child(4){animation-delay:.18s}.card:nth-child(5){animation-delay:.24s}.card:nth-child(6){animation-delay:.3s}.card:nth-child(7){animation-delay:.36s}@keyframes rise{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding-top:66px}}@media(max-width:560px){.shell{width:min(100% - 26px,1160px)}.topbar{height:66px}.top-right{font-size:9px;gap:8px}.brand-word{font-size:12px}.brand-mark{width:32px;height:32px}.hero{padding:58px 0 38px}h1{font-size:clamp(39px,12vw,63px)}.hero p{font-size:13px}.stats{margin-top:33px}.stat b{font-size:17px}.stat span{font-size:8px}.section-head{align-items:start;flex-direction:column}.section-head p{line-height:1.6}.controls{align-items:stretch}.search-wrap{min-width:100%}.grid{grid-template-columns:1fr;gap:12px}.card{min-height:0;padding:18px}.card p{min-height:0;margin-bottom:15px}.footer{margin-top:48px}.filters{width:100%}.filter{flex:1}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="shell topbar">
+<a class="brand" href="#" aria-label="DARKI LINKS home"><span class="brand-mark"><span>D</span></span><span class="brand-word">DARKI <em>LINKS</em></span></a>
+<div class="top-right"><span class="status"><i class="dot"></i> DIGITAL NEXUS</span><span>v.01</span></div>
+</header>
+<main class="shell">
+<section class="hero reveal">
+<div class="eyebrow">WELCOME TO THE ECOSYSTEM</div>
+<h1>One portal.<br><span class="glow">Infinite builds.</span></h1>
+<p>A curated gateway to everything I've built, shipped, and imagined. <strong>Seven destinations. One DARKI universe.</strong></p>
+<div class="hero-actions"><a class="btn btn-primary" href="#projects">Explore projects <span aria-hidden="true">↘</span></a><a class="btn btn-quiet" href="https://me.darki.online" target="_blank" rel="noopener noreferrer">About DARKI ↗</a></div>
+<div class="stats" aria-label="Project statistics"><div class="stat"><b id="projectCount">07</b><span>Destinations</span></div><div class="stat"><b>24/7</b><span>On the web</span></div><div class="stat"><b>∞</b><span>Ideas loading</span></div></div>
+</section>
+<section id="projects" class="reveal">
+<div class="section-head"><div><div class="section-kicker">// THE COLLECTION</div><h2>Explore the network</h2></div><p>Pick a destination. Start exploring.</p></div>
+<div class="controls"><label class="search-wrap"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="search" class="search" type="search" placeholder="Search projects, tools, categories..." aria-label="Search projects"></label><div class="filters" aria-label="Filter projects"><button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Apps">Apps</button><button class="filter" data-filter="Tools">Tools</button><button class="filter" data-filter="Business">Business</button><button class="filter" data-filter="Personal">Personal</button></div></div>
+<div class="grid" id="grid">
+<a class="card reveal" style="--accent:#58f6ff;--accent-soft:#58f6ff12;--accent-border:#58f6ff55" href="https://studysphere.darki.online" target="_blank" rel="noopener noreferrer" data-category="Apps" data-search="studysphere study sphere education productivity notes library android app">
+<div class="card-top"><div class="app-icon">SS</div><span class="arrow">↗</span></div><div class="tag">Apps / Education</div><h3>StudySphere</h3><p>Your study companion for notes, files, productivity, and learning.</p><div class="card-foot"><span>studysphere.darki.online</span><span class="visit">Launch ↗</span></div></a>
+<a class="card reveal" style="--accent:#ff3dcb;--accent-soft:#ff3dcb12;--accent-border:#ff3dcb55" href="https://me.darki.online" target="_blank" rel="noopener noreferrer" data-category="Personal" data-search="darki portfolio personal creator about profile">
+<div class="card-top"><div class="app-icon">D.</div><span class="arrow">↗</span></div><div class="tag">Personal / Portfolio</div><h3>DARKI Portfolio</h3><p>The person behind the projects, ideas, experiments, and builds.</p><div class="card-foot"><span>me.darki.online</span><span class="visit">Meet DARKI ↗</span></div></a>
+<a class="card reveal" style="--accent:#9b6dff;--accent-soft:#9b6dff12;--accent-border:#9b6dff55" href="https://darki.online" target="_blank" rel="noopener noreferrer" data-category="Personal" data-search="darki main website identity landing page">
+<div class="card-top"><div class="app-icon">DK</div><span class="arrow">↗</span></div><div class="tag">Identity / Home</div><h3>DARKI Online</h3><p>The main domain and front door to the DARKI digital universe.</p><div class="card-foot"><span>darki.online</span><span class="visit">Enter ↗</span></div></a>
+<a class="card reveal" style="--accent:#ffb454;--accent-soft:#ffb45412;--accent-border:#ffb45455" href="https://helpers.darki.online" target="_blank" rel="noopener noreferrer" data-category="Tools" data-search="xpdfs pdf helpers tools utilities document">
+<div class="card-top"><div class="app-icon">PDF</div><span class="arrow">↗</span></div><div class="tag">Tools / Utilities</div><h3>xPDFs</h3><p>A home for helpful document utilities and web tools.</p><div class="card-foot"><span>helpers.darki.online</span><span class="visit">Open tools ↗</span></div></a>
+<a class="card reveal" style="--accent:#ff5277;--accent-soft:#ff527712;--accent-border:#ff527755" href="https://ent.darki.online" target="_blank" rel="noopener noreferrer" data-category="Apps" data-search="anime stream entertainment anime streaming">
+<div class="card-top"><div class="app-icon">AN</div><span class="arrow">↗</span></div><div class="tag">Apps / Entertainment</div><h3>Anime Stream</h3><p>An anime-focused streaming project in the DARKI ecosystem.</p><div class="card-foot"><span>ent.darki.online</span><span class="visit">Explore ↗</span></div></a>
+<a class="card reveal" style="--accent:#79ffbd;--accent-soft:#79ffbd12;--accent-border:#79ffbd55" href="https://shop.darki.online" target="_blank" rel="noopener noreferrer" data-category="Business" data-search="m solution shop ecommerce orders shopping management">
+<div class="card-top"><div class="app-icon">MS</div><span class="arrow">↗</span></div><div class="tag">Business / Commerce</div><h3>M Solution</h3><p>Shop tools for products, orders, and day-to-day business.</p><div class="card-foot"><span>shop.darki.online</span><span class="visit">Visit shop ↗</span></div></a>
+<a class="card reveal" style="--accent:#ff8e68;--accent-soft:#ff8e6812;--accent-border:#ff8e6855" href="https://bxbc.darki.online" target="_blank" rel="noopener noreferrer" data-category="Business" data-search="bxbc bharatpur xerox book centre shop business stationery">
+<div class="card-top"><div class="app-icon">BX</div><span class="arrow">↗</span></div><div class="tag">Business / Store</div><h3>BXBC</h3><p>A digital space for Bharatpur Xerox &amp; Book Centre.</p><div class="card-foot"><span>bxbc.darki.online</span><span class="visit">Open BXBC ↗</span></div></a>
+</div>
+<div class="empty" id="empty">No projects found. Try a different search or category.</div>
+</section>
+</main>
+<footer class="shell footer"><span><strong>DARKI LINKS</strong> &nbsp;·&nbsp; Built with curiosity.</span><span>Designed in the dark. <a href="https://github.com/nur12islam/links" target="_blank" rel="noopener noreferrer">Source ↗</a></span><span>© <span id="year"></span> DARKI</span></footer>
+<script>
+(() => {
+ const search = document.getElementById('search');
+ const cards = [...document.querySelectorAll('.card')];
+ const buttons = [...document.querySelectorAll('.filter')];
+ const empty = document.getElementById('empty');
+ let category = 'All';
+ function update() {
+   const query = search.value.trim().toLowerCase();
+   let visible = 0;
+   cards.forEach(card => {
+     const matchesCategory = category === 'All' || card.dataset.category === category;
+     const haystack = (card.dataset.search + ' ' + card.innerText + ' ' + card.href).toLowerCase();
+     const matchesQuery = !query || haystack.includes(query);
+     const show = matchesCategory && matchesQuery;
+     card.hidden = !show;
+     if (show) visible++;
+   });
+   empty.style.display = visible ? 'none' : 'block';
+   document.getElementById('projectCount').textContent = String(visible).padStart(2,'0');
+ }
+ search.addEventListener('input', update);
+ buttons.forEach(button => button.addEventListener('click', () => {
+   category = button.dataset.filter;
+   buttons.forEach(item => { item.classList.toggle('active', item === button); item.setAttribute('aria-pressed', String(item === button)); });
+   update();
+ }));
+ buttons.forEach(button => button.setAttribute('aria-pressed', String(button.classList.contains('active'))));
+ document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
